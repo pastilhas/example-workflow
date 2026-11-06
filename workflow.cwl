@@ -61,14 +61,10 @@ $graph:
       text:
         type: string
         doc: String to split into words and sort alphabetically.
-        inputBinding:
-          position: 1
       output_file:
         type: string
         default: sorted_words.txt
         doc: Name of the text file to write the sorted words to.
-        inputBinding:
-          position: 2
     outputs:
       sorted_words_file:
         label: Sorted words text file
@@ -80,7 +76,7 @@ $graph:
     requirements:
       InlineJavascriptRequirement: {}
       DockerRequirement:
-        dockerPull: iliad-repository.inesctec.pt/word-sorter:latest
+        dockerPull: iliad-repository.inesctec.pt/word-sorter:0.1.0
     s:name: word_sorter
     s:description: Sorts the words in a string without regard to case and writes them to a text file.
     s:keywords:
